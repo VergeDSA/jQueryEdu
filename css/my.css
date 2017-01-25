@@ -13,3 +13,15 @@ table#books td {
 table#books td:hover {
     background: cyan;
 }
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
