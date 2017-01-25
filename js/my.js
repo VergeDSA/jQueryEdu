@@ -62,11 +62,13 @@ function sortGrid(colNum, text) {
 
 var b_count = 0;
 $("button.btn-action").click(function (e) {
-    if (!b_count) {
-        $(this).before($("div.red"))
-        b_count++;
-        return;
-    }
+        if (!b_count) {
+            $(this).before($("div.red"))
+            b_count++;
+            return;
+        }
         $("div:last").remove();
-}
-        );
+    }
+);
+
+jQuery("li:first:not(li.no)", jQuery("ul:has(li.qwerty)")).css('color','pink');
