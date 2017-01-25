@@ -73,3 +73,10 @@ $("button.btn-action").click(function (e) {
 
 jQuery("li:first:not(li.no)", jQuery("ul:has(li.qwerty)")).css('color','pink');
 jQuery("h3:not(h3.abc)").addClass('green');
+
+setInterval((function () {
+    var colorR = Math.floor((Math.random() * 256));
+    var colorG = Math.floor((Math.random() * 256));
+    var colorB = Math.floor((Math.random() * 256));
+    $("div.pavlenko:lt(3)").css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");;
+}), 3000);
