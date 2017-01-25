@@ -72,3 +72,4 @@ $("button.btn-action").click(function (e) {
 );
 
 jQuery("li:first:not(li.no)", jQuery("ul:has(li.qwerty)")).css('color','pink');
+jQuery("h3:not(h3.abc)").addClass('green');
