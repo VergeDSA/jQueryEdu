@@ -1,0 +1,15 @@
+table#books {
+    border-collapse: collapse;
+    border: 1px solid crimson;
+    width: 100%;
+    font-size: 30px;
+    font-family: Verdana, sans-serif
+}
+
+table#books td {
+    cursor: pointer;
+}
+
+table#books td:hover {
+    background: cyan;
+}
