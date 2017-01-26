@@ -61,7 +61,7 @@ function sortGrid(colNum, text) {
 }
 
 var b_count = 0;
-$("button.btn-action").click(function (e) {
+$("button.btn-action:first").click(function (e) {
         if (!b_count) {
             $(this).before($("div.red"))
             b_count++;
@@ -71,12 +71,22 @@ $("button.btn-action").click(function (e) {
     }
 );
 
-jQuery("li:first:not(li.no)", jQuery("ul:has(li.qwerty)")).css('color','pink');
+jQuery("li:first:not(li.no)", jQuery("ul:has(li.qwerty)")).css('color', 'pink');
 jQuery("h3:not(h3.abc)").addClass('green');
 
 setInterval((function () {
     var colorR = Math.floor((Math.random() * 256));
     var colorG = Math.floor((Math.random() * 256));
     var colorB = Math.floor((Math.random() * 256));
-    $("div.pavlenko:lt(3)").css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");;
+    $("div.pavlenko:lt(3)").css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+    ;
 }), 3000);
+
+$("button.btn-action:contains(5)").click(function (e) {
+        $("li:even", $("ul")).each(function () {
+            // $("li:even").each(function () {
+            $(this).append(' ' + $(this).index());
+        });
+        $("li:odd", $("ul")).remove();
+    }
+);
